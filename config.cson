@@ -1,0 +1,76 @@
+"*":
+  "advanced-open-file":
+    createDirectories: true
+    createFileInstantly: true
+    defaultInputValue: "Project root"
+  "autocomplete-plus":
+    includeCompletionsFromAllBuffers: false
+    minimumWordLength: 4
+    useCoreMovementCommands: false
+  autosave:
+    enabled: true
+  core:
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+      "text.html.php": [
+        "php"
+      ]
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "tree-view"
+    ]
+    packagesWithKeymapsDisabled: [
+      "advanced-open-file"
+    ]
+    telemetryConsent: "limited"
+  docblockr:
+    align_tags: "no"
+    param_description: false
+    return_description: false
+    spacer_between_sections: "after_description"
+  editor:
+    fontSize: 18
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 4
+  "exception-reporting":
+    userId: "011f74c1-1836-406d-b7ba-fef11af0326d"
+  "markdown-preview": {}
+  minimap: {}
+  nuclide:
+    hyperclick:
+      darwinTriggerKeys: "altKey,metaKey"
+    "nuclide-definition-preview":
+      editorHeight: 60
+    "nuclide-flow":
+      pathToFlow: "/Users/jared/sites/p7/wp-content/themes/rad-theme/node_modules/.bin/flow"
+    "nuclide-home":
+      showHome: false
+    "nuclide-working-sets": {}
+  "project-manager": {}
+  "seti-ui":
+    displayIgnored: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".html.php.text":
+  editor:
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…$"
+    tabLength: 4

@@ -1,0 +1,58 @@
+/* show trailing whitespace in bright red */
+.trailing-whitespace {
+  background-color: red;
+}
+
+/* selected text */
+.editor .selection .region {
+  background-color: yellow;
+}
+
+/* cmd-r overlay go to function, not so overwhelming */
+atom-panel.modal:after {
+  opacity: 0.4;
+}
+
+/* make file highlighted in sidebar much more noticible */
+.list-tree .selected:before {
+  background-color: #070AAB;
+}
+
+/* override the red/green thing when finding in project with text in replace input */
+.matches .match.highlight-error {
+  background-color: #0f82e6;
+}
+.matches .replacement.highlight-success {
+  display: none;
+}
+
+
+/* Nuclide */
+.nuclide-file-tree .padded .btn-block {
+  opacity: 0.3;
+}
+.nuclide-file-tree-toolbar {
+  opacity: 0.1;
+}
+.nuclide-file-tree-toolbar:hover {
+  opacity: 1;
+}
+.nuclide-file-tree-section-caption:nth-child(2) {
+  display: none; /* open files nuclide area */
+}
+.nuclide-file-tree-section-caption:nth-child(1) {
+  display: none; /* uncommitted changes nuclide area */
+}
+
+/* Markdown Preview */
+.markdown-preview.markdown-preview {
+  atom-text-editor {
+    padding: 0.75em 1em 0em 1em;
+  }
+}
+
+/* Minimap - hide default scrollbar when minimap showing */
+atom-text-editor[with-minimap] .vertical-scrollbar {
+  opacity: 0;
+  width: 0;
+}

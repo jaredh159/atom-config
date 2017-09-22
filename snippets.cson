@@ -1,0 +1,166 @@
+# JS
+".source.js":
+
+	# Testing
+	beforeEach:
+		prefix: "beforeEach"
+		body: '''
+			beforeEach(() => {
+			  ${1}
+			});$2
+		'''
+
+	describe:
+		prefix: "describe"
+		body: '''
+			describe('$1', () => {
+			  ${2}
+			});$3
+		'''
+
+	it:
+		prefix: "it"
+		body: '''
+			it('$1', () => {
+			  ${2}
+			});$3
+		'''
+
+# PHP
+".text.html.php":
+
+  # Core PHP things
+	closure:
+		prefix: "clos"
+		body: '''
+			function (${1}) {
+				${2}
+			}$3
+		'''
+
+  define:
+    prefix: "def"
+		body: "define('$1', ${2:something});$3"
+
+	protectedFunction:
+		prefix: "profun"
+		body: '''
+			protected function ${1:funcName}(${2})
+			{
+				${3}
+			}$4
+		'''
+
+	publicFunction:
+		prefix: "pubfun"
+		body: '''
+			public function ${1:funcName}(${2})
+			{
+				${3}
+			}$4
+		'''
+
+	strpos:
+		prefix: "strpos"
+		body: "strpos(${1:haystack}, ${2:needle})$3"
+
+	protectedProperty:
+		prefix: "pro"
+		body: "protected \$${1:property}"
+
+	genericDocblock:
+		prefix: "db"
+		body: '''
+			/**
+			 * ${1}
+			 */
+		'''
+
+	varString:
+		prefix: "varstring"
+		body: '''
+			/**
+			 * @var string
+			 */
+		'''
+
+	varArray:
+		prefix: "vararray"
+		body: '''
+			/**
+			 * @var array
+			 */
+		'''
+
+	varInt:
+		prefix: "varint"
+		body: '''
+			/**
+			 * @var int
+			 */
+		'''
+
+	varBool:
+		prefix: "varbool"
+		body: '''
+			/**
+			 * @var bool
+			 */
+		'''
+
+
+
+  # Peridot
+	beforeEach:
+		prefix: "beforeEach"
+		body: '''
+			beforeEach(function () {
+			    ${1}
+			});$2
+		'''
+
+	describe:
+		prefix: "describe"
+		body: '''
+			describe('$1', function () {
+			    ${2}
+			});$3
+		'''
+
+	expect:
+		prefix: "expect"
+		body: "expect(${1:actual})->to->${2:equal}(${3:expected});$4"
+
+	it:
+		prefix: "it"
+		body: '''
+			it('$1', function () {
+			    ${2}
+			});$3
+		'''
+
+  # PHPUnit
+	assertSame:
+		prefix: "as"
+		body: "\\$this->assertSame(${1:expected}, ${2:actual});$3"
+
+	assertTrue:
+		prefix: "at"
+		body: "\\$this->assertTrue(${1:something});$2"
+
+	setup:
+		prefix: "setup"
+		body: '''
+			public function setUp()
+			{
+				${1}
+			}$2
+		'''
+	ndump:
+		prefix: "ndump"
+		body: "\\\\NrDump::it(${1:something});$2"
+
+	# Prophecy
+	willReturn:
+		prefix: "wr"
+		body: "->willReturn($1);$2"

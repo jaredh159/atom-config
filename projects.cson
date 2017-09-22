@@ -1,0 +1,51 @@
+# https://octicons.github.com/
+[
+  {
+    title: "Rad Theme"
+    group: "NetRivet"
+    paths: [
+      "/Users/jared/sites/p7/wp-content/themes/rad-theme"
+    ]
+    icon: "icon-beaker"
+  }
+  {
+    title: "ProPhoto 6"
+    group: "NetRivet"
+    paths: [
+      "/Users/jared/sites/p6/wp-content/themes/prophoto"
+    ]
+    icon: "icon-verified"
+  }
+  {
+    title: "Change Management"
+    group: "NetRivet"
+    paths: [
+      "/Users/jared/repos/nr/change-management"
+    ]
+    icon: "icon-verified"
+  }
+  {
+    title: "Evans"
+    group: "MSF"
+    paths: [
+      "/Users/jared/sites/evans/wp-content/plugins/evans"
+    ]
+    icon: "icon-globe"
+  },
+  {
+    title: "MSF Ansible"
+    group: "MSF"
+    paths: [
+      "/Users/jared/repos/msf/ansible"
+    ]
+    icon: "icon-globe"
+  },
+  {
+    title: "Atom"
+    group: "Atom"
+    paths: [
+      "/Users/jared/.atom"
+    ]
+    icon: "icon-mark-github"
+  }
+]
