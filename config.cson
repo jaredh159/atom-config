@@ -40,7 +40,7 @@
     return_description: false
     spacer_between_sections: "after_description"
   editor:
-    fontSize: 18
+    fontSize: 16
     preferredLineLength: 100
     scrollPastEnd: true
     showInvisibles: true
@@ -52,11 +52,11 @@
   minimap: {}
   nuclide:
     hyperclick:
-      darwinTriggerKeys: "altKey,metaKey"
+      darwinTriggerKeys: "ctrlKey,altKey,metaKey"
     "nuclide-definition-preview":
       editorHeight: 60
     "nuclide-flow":
-      pathToFlow: "/Users/jared/sites/p7/wp-content/themes/rad-theme/node_modules/.bin/flow"
+      pathToFlow: "/Users/jared/sites/p7/wp-content/themes/prophoto/node_modules/.bin/flow"
     "nuclide-home":
       showHome: false
     "nuclide-working-sets": {}
@@ -74,3 +74,6 @@
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…$"
     tabLength: 4
+".reason.source":
+  editor:
+    preferredLineLength: 110
