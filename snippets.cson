@@ -1,194 +1,285 @@
 # JS
 ".source.js":
 
-	mmap:
-		prefix: "mmap"
-		body: "import { Map } from 'immutable';"
+  'Import React':
+    'prefix': 'imr'
+    'body': "import * as React from 'react';"
 
-	# Testing
-	beforeEach:
-		prefix: "beforeEach"
-		body: '''
-			beforeEach(() => {
-			  ${1}
-			});$2
-		'''
+  'Flow start':
+    'prefix': 'fl'
+    'body': '// @flow\n'
 
-	describe:
-		prefix: "describe"
-		body: '''
-			describe('$1', () => {
-			  ${2}
-			});$3
-		'''
+  # Testing
+  beforeEach:
+    prefix: "beforeEach"
+    body: '''
+    beforeEach(() => {
+      ${1}
+    });$2
+    '''
 
-	it:
-		prefix: "it"
-		body: '''
-			it('$1', () => {
-			  ${2}
-			});$3
-		'''
+  describe:
+    prefix: "describe"
+    body: '''
+    describe('$1', () => {
+      ${2}
+    });$3
+    '''
 
-	test:
-		prefix: "test"
-		body: '''
-			test('$1', () => {
-			  ${2}
-			});$3
-		'''
+  it:
+    prefix: "it"
+    body: '''
+    it('$1', () => {
+      ${2}
+    });$3
+    '''
 
-# CSS
+  test:
+    prefix: "test"
+    body: '''
+    test('$1', () => {
+      ${2}
+    });$3
+    '''
 
-'.source.css':
+# asciidoc
+'.source.asciidoc:not(.markup.code)':
 
-	ccolor:
-		prefix: "ccolor"
-		body: "@value color_${1}: from 'visual-builder/components/Colors.css';"
+  '[.signed-section-closing]':
+    'prefix': 'sscl'
+    'body': '[.signed-section-closing]'
+
+  '[.signed-section-signature]':
+    'prefix': 'sss'
+    'body': '[.signed-section-signature]'
+
+  '[.signed-section-context-open]':
+    'prefix': 'ssco'
+    'body': '[.signed-section-context-open]'
+
+  '[.signed-section-context-close]':
+    'prefix': 'sscc'
+    'body': '[.signed-section-context-close]'
+
+  '[.salutation]':
+    'prefix': 'sal'
+    'body': '[.salutation]'
+
+  '[.chapter-synopsis]':
+    'prefix': 'cs'
+    'body': '[.chapter-synopsis]'
+
+  '[.embedded-content-document.letter]':
+    'prefix': 'ed'
+    'body': '[.embedded-content-document.letter]\n--\n'
+
+  '[.embedded-content-document.epistle]':
+    'prefix': 'ede'
+    'body': '[.embedded-content-document.epistle]\n--\n'
+
+  '[quote.scripture]':
+    'prefix': 'qs'
+    'body': '[quote.scripture, , $1]\n____'
+
+  '[quote]':
+    'prefix': 'q'
+    'body': '[quote]\n____'
+
+  '[.asterism]':
+    'prefix': 'ast'
+    'body': '[.asterism]\n\'\'\''
+
+  '[.letter-heading]':
+    'prefix': 'lh'
+    'body': '[.letter-heading]'
+
+  'smart apostrophe open (start)':
+    'prefix': 'sas'
+    'body': '\'`'
+
+  'smart apostrophe close (end)':
+    'prefix': 'sae'
+    'body': '`\''
+
+  'smart quote open (start)':
+    'prefix': 'sqs'
+    'body': '"`'
+
+  'smart quote close (end)':
+    'prefix': 'sqe'
+    'body': '`"'
+
+  '[.offset]':
+    'prefix': 'off'
+    'body': '[.offset]'
+
+  '[.numbered]':
+    'prefix': 'num'
+    'body': '[.numbered]'
+
+  '[.discourse-part]':
+    'prefix': 'dp'
+    'body': '[.discourse-part]'
+
+  '[.small-break]':
+    'prefix': 'sb'
+    'body': '[.small-break]\n\'\'\'\n'
+
+  '[.alt]':
+    'prefix': 'alt'
+    'body': '[.alt]\n=== '
+
+  '[.old-style]':
+    'prefix': 'os'
+    'body': '[.old-style]'
 
 # PHP
 ".text.html.php":
 
   # Core PHP things
-	closure:
-		prefix: "clos"
-		body: '''
-			function (${1}) {
-				${2}
-			}$3
-		'''
+  pforeach:
+    prefix: "pforeach"
+    body: '''
+    foreach (\$${1:variable} as \$${2:key}${3: => \$${4:value}}) {
+        ${5}
+    }${6}
+    '''
+
+  closure:
+    prefix: "clos"
+    body: '''
+    function (${1}) {
+        ${2}
+    }$3
+    '''
 
   define:
     prefix: "def"
-		body: "define('$1', ${2:something});$3"
+    body: "define('$1', ${2:something});$3"
 
-	protectedFunction:
-		prefix: "profun"
-		body: '''
-			protected function ${1:funcName}(${2})
-			{
-				${3}
-			}$4
-		'''
+  protectedFunction:
+    prefix: "profun"
+    body: '''
+    protected function ${1:funcName}(${2})
+    {
+        ${3}
+    }$4
+    '''
 
-	publicFunction:
-		prefix: "pubfun"
-		body: '''
-			public function ${1:funcName}(${2})
-			{
-				${3}
-			}$4
-		'''
+  publicFunction:
+    prefix: "pubfun"
+    body: '''
+    public function ${1:funcName}(${2})
+    {
+        ${3}
+    }$4
+    '''
 
-	strpos:
-		prefix: "strpos"
-		body: "strpos(${1:haystack}, ${2:needle})$3"
+  strpos:
+    prefix: "strpos"
+    body: "strpos(${1:haystack}, ${2:needle})$3"
 
-	protectedProperty:
-		prefix: "pro"
-		body: "protected \$${1:property}"
+  protectedProperty:
+    prefix: "pro"
+    body: "protected \$${1:property}"
 
-	genericDocblock:
-		prefix: "db"
-		body: '''
-			/**
-			 * ${1}
-			 */
-		'''
+  genericDocblock:
+    prefix: "db"
+    body: '''
+    /**
+     * ${1}
+     */
+    '''
 
-	varString:
-		prefix: "varstring"
-		body: '''
-			/**
-			 * @var string
-			 */
-		'''
+  varString:
+    prefix: "varstring"
+    body: '''
+    /**
+     * @var string
+     */
+    '''
 
-	varArray:
-		prefix: "vararray"
-		body: '''
-			/**
-			 * @var array
-			 */
-		'''
+  varArray:
+    prefix: "vararray"
+    body: '''
+    /**
+     * @var array
+     */
+    '''
 
-	varInt:
-		prefix: "varint"
-		body: '''
-			/**
-			 * @var int
-			 */
-		'''
+  varInt:
+    prefix: "varint"
+    body: '''
+    /**
+     * @var int
+     */
+    '''
 
-	varBool:
-		prefix: "varbool"
-		body: '''
-			/**
-			 * @var bool
-			 */
-		'''
-
+  varBool:
+    prefix: "varbool"
+    body: '''
+    /**
+     * @var bool
+     */
+    '''
 
 
   # Peridot
-	beforeEach:
-		prefix: "beforeEach"
-		body: '''
-			beforeEach(function () {
-			    ${1}
-			});$2
-		'''
+  beforeEach:
+    prefix: "beforeEach"
+    body: '''
+    beforeEach(function () {
+        ${1}
+    });$2
+    '''
 
-	describe:
-		prefix: "describe"
-		body: '''
-			describe('$1', function () {
-			    ${2}
-			});$3
-		'''
+  describe:
+    prefix: "describe"
+    body: '''
+    describe('$1', function () {
+        ${2}
+    });$3
+    '''
 
-	expect:
-		prefix: "expect"
-		body: "expect(${1:actual})->to->${2:equal}(${3:expected});$4"
+  expect:
+    prefix: "expect"
+    body: "expect(${1:actual})->to->${2:equal}(${3:expected});$4"
 
-	it:
-		prefix: "it"
-		body: '''
-			it('$1', function () {
-			    ${2}
-			});$3
-		'''
+  it:
+    prefix: "it"
+    body: '''
+    it('$1', function () {
+        ${2}
+    });$3
+    '''
 
   # PHPUnit
-	assertSame:
-		prefix: "as"
-		body: "\\$this->assertSame(${1:expected}, ${2:actual});$3"
+  assertSame:
+    prefix: "as"
+    body: "\\$this->assertSame(${1:expected}, ${2:actual});$3"
 
-	assertTrue:
-		prefix: "at"
-		body: "\\$this->assertTrue(${1:something});$2"
+  assertTrue:
+    prefix: "at"
+    body: "\\$this->assertTrue(${1:something});$2"
 
-	setup:
-		prefix: "setup"
-		body: '''
-			public function setUp()
-			{
-				${1}
-			}$2
-		'''
-	test:
-		prefix: "test"
-		body: '''
-			public function test${1:SomeLol}()
-			{
-				${2}
-			}$3
-		'''
-	ndump:
-		prefix: "ndump"
-		body: "\\\\NrDump::it(${1:something});$2"
+  setup:
+    prefix: "setup"
+    body: '''
+    public function setUp()
+    {
+        ${1}
+    }$2
+    '''
 
-	# Prophecy
-	willReturn:
-		prefix: "wr"
-		body: "->willReturn($1);$2"
+  test:
+    prefix: "test"
+    body: '''
+    public function test${1:SomeLol}()
+    {
+        ${2}
+    }$3
+    '''
+  # Prophecy
+  willReturn:
+    prefix: "wr"
+    body: "->willReturn($1);$2"

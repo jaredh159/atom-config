@@ -1,8 +1,7 @@
-blob-store
-compile-cache
-dev
-storage
-.apm
-.node-gyp
-.npm
-packages
+.DS_Store
+blob-store/
+compile-cache/
+recovery/
+packages/
+.node-gyp/
+.apm/

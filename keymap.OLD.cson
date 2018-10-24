@@ -1,0 +1,99 @@
+
+# * https://gist.github.com/jaredh159/a4b42159e1ce74ded97a22a117775e72
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#_customizing_keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+
+
+# ctrl-shift-m opens markdown preview pane
+
+'atom-text-editor':
+  'cmd-shift-t': 'whitespace:remove-trailing-whitespace'
+  'cmd-l': 'core:move-right'
+  'cmd-j': 'core:move-left'
+  'cmd-shift-l': 'core:select-right'
+  'cmd-shift-j': 'core:select-left'
+  'ctrl-cmd-l': 'editor:move-to-end-of-line'
+  'ctrl-cmd-j': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-cmd-l': 'editor:select-to-end-of-line'
+  'ctrl-shift-cmd-j': 'editor:select-to-first-character-of-line'
+  'cmd-alt-l': 'editor:move-to-next-word-boundary'
+  'cmd-alt-j': 'editor:move-to-previous-word-boundary'
+  'shift-alt-cmd-l': 'editor:select-to-next-word-boundary'
+  'shift-alt-cmd-j': 'editor:select-to-previous-word-boundary'
+  'cmd-i': 'core:move-up'
+  'cmd-k': 'core:move-down'
+  'cmd-shift-i': 'core:select-up'
+  'cmd-shift-k': 'core:select-down'
+  'cmd-ctrl-i': 'jared:move-up-10-lines'
+  'cmd-ctrl-k': 'jared:move-down-10-lines'
+  'cmd-m': 'jared:insert-curly-braces'
+  'cmd-.': 'jared:insert-square-braces'
+  'cmd-ctrl-;': 'jared:semicolon-enter'
+  'ctrl-alt-i': 'editor:move-line-up'
+  'ctrl-alt-k': 'editor:move-line-down'
+  'cmd-k cmd-l': 'unset!' # <-- unblock cmd-k
+  'cmd-k cmd-u': 'unset!' # <-- unblock cmd-k
+  'alt-cmd-f': 'find-and-replace:show' # match sublime find in buffer
+
+# this section required to unblock command-k from it's weird 2-second delay
+# https://discuss.atom.io/t/how-to-fix-the-one-step-delay-for-atom-text-editor/26716/2
+'body':
+  'cmd-k alt-cmd-w': 'unset!'
+  'cmd-k cmd-down': 'unset!'
+  'cmd-k cmd-left': 'unset!'
+  'cmd-k cmd-right': 'unset!'
+  'cmd-k cmd-n': 'unset!'
+  'cmd-k cmd-p': 'unset!'
+  'cmd-k cmd-up': 'unset!'
+  'cmd-k cmd-w': 'unset!'
+  'cmd-k cmd-down': 'unset!'
+  'cmd-k down': 'unset!'
+  'cmd-k left': 'unset!'
+  'cmd-k right': 'unset!'
+  'cmd-k up': 'unset!'
+'atom-workspace atom-text-editor:not([mini])':
+  'cmd-k cmd-0': 'unset!'
+  'cmd-k cmd-1': 'unset!'
+  'cmd-k cmd-2': 'unset!'
+  'cmd-k cmd-3': 'unset!'
+  'cmd-k cmd-4': 'unset!'
+  'cmd-k cmd-5': 'unset!'
+  'cmd-k cmd-6': 'unset!'
+  'cmd-k cmd-7': 'unset!'
+  'cmd-k cmd-8': 'unset!'
+  'cmd-k cmd-9': 'unset!'
+'.platform-darwin atom-text-editor':
+  'cmd-k cmd-d': 'unset!'
+'.platform-darwin .nuclide-file-tree':
+  'cmd-k down': 'nuclide-file-tree:open-selected-entry-down'
+  'cmd-k left': 'unset!'
+  'cmd-k right': 'unset!'
+  'cmd-k up': 'unset!'
+
+
+'atom-workspace':
+  'cmd-ctrl-7': 'nuclide-file-tree:toggle'
+
+'body atom-text-editor.autocomplete-active':
+  'cmd-i': 'autocomplete-plus:move-up'
+  'cmd-k': 'autocomplete-plus:move-down'
+  'pageup': 'autocomplete-plus:page-up'
+  'pagedown': 'autocomplete-plus:page-down'
+  'home': 'autocomplete-plus:move-to-top'
+  'end': 'autocomplete-plus:move-to-bottom'
+
+# advanced open file
+'.platform-darwin atom-workspace':
+  'cmd-ctrl-n': 'advanced-open-file:toggle'
+  'cmd-k cmd-b': 'unset!' # <-- unblock cmd-k
+'.advanced-open-file atom-text-editor':
+  'tab': 'advanced-open-file:autocomplete'
+  'up': 'advanced-open-file:move-cursor-up'
+  'down': 'advanced-open-file:move-cursor-down'
+  'pageup': 'advanced-open-file:move-cursor-top'
+  'pagedown': 'advanced-open-file:move-cursor-bottom'
+  'cmd-i': 'advanced-open-file:move-cursor-up'
+  'cmd-k': 'advanced-open-file:move-cursor-down'
+'.platform-darwin .advanced-open-file atom-text-editor':
+  'cmd-z': 'advanced-open-file:undo'

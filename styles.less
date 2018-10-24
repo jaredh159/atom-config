@@ -1,3 +1,12 @@
+.tab-foldername-index__file {
+  display: none;
+}
+
+.tab-foldername-index__folder::after {
+  content: "/index.js";
+  opacity: 0.4;
+}
+
 /* show trailing whitespace in bright red */
 .trailing-whitespace {
   background-color: red;
@@ -19,10 +28,10 @@ atom-panel.modal:after {
 }
 
 /* override the red/green thing when finding in project with text in replace input */
-.matches .match.highlight-error {
+.match-row .match.highlight-error {
   background-color: #0f82e6;
 }
-.matches .replacement.highlight-success {
+.match-row .replacement.highlight-success {
   display: none;
 }
 
@@ -55,4 +64,18 @@ atom-panel.modal:after {
 atom-text-editor[with-minimap] .vertical-scrollbar {
   opacity: 0;
   width: 0;
+}
+
+/* asciidoctor previe */
+.asciidoc-preview > div {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.asciidoc-preview div.paragraph p {
+  font-size: 19px;
+  font-family: Georgia;
+  line-height: 1.76em;
+  margin-bottom: 2em;
+  color: #444;
 }
