@@ -1,8 +1,22 @@
-advanced-open-file@0.16.6
+advanced-open-file@0.16.8
+asciidoc-preview@2.12.1
 atomizr@0.23.1
-docblockr@0.11.0
-minimap@4.29.2
-nuclide@0.241.0
+copy-path@0.5.1
+docblockr@0.13.7
+emmet@2.4.3
+file-icons@2.1.18
+git-blame@1.6.0
+language-asciidoc@1.11.0
+language-babel@2.84.0
+language-diff@0.7.0
+language-gettext@0.6.1
+linter@2.0.0
+linter-js-yaml@1.2.8
+linter-stylelint@4.3.2
+minimap@4.29.8
+nuclide@0.296.0
+pigments@0.40.2
+prettier-atom@0.55.2
 project-manager@3.3.5
-seti-ui@1.9.0
+seti-ui@1.10.0
 

@@ -71,7 +71,7 @@
 
   '[.embedded-content-document.letter]':
     'prefix': 'ed'
-    'body': '[.embedded-content-document.letter]\n--\n'
+    'body': '[.embedded-content-document.${1:letter}]\n--\n$2'
 
   '[.embedded-content-document.epistle]':
     'prefix': 'ede'
@@ -132,6 +132,10 @@
   '[.old-style]':
     'prefix': 'os'
     'body': '[.old-style]'
+
+  '[.chapter-subtitle--blurb]':
+    'prefix': 'csb'
+    'body': '[.chapter-subtitle--blurb]'
 
 # PHP
 ".text.html.php":
