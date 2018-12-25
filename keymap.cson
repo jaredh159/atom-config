@@ -66,14 +66,14 @@
 '.platform-darwin atom-text-editor':
   'cmd-k cmd-d': 'unset!'
 '.platform-darwin .nuclide-file-tree':
-  'cmd-k down': 'nuclide-file-tree:open-selected-entry-down'
+  'cmd-k down': 'tree-view:open-selected-entry-down'
   'cmd-k left': 'unset!'
   'cmd-k right': 'unset!'
   'cmd-k up': 'unset!'
 
 
 'atom-workspace':
-  'cmd-ctrl-7': 'nuclide-file-tree:toggle'
+  'cmd-ctrl-7': 'tree-view:toggle'
 
 'body atom-text-editor.autocomplete-active':
   'cmd-i': 'autocomplete-plus:move-up'

@@ -1,4 +1,6 @@
 "*":
+  "autocomplete-plus":
+    "useCoreMovementCommands": false
   autosave:
     enabled: true
   core:
@@ -7,6 +9,9 @@
         ".hgrc"
         ".buckconfig"
         ".flowconfig"
+      ]
+      "source.js.jsx": [
+        "js"
       ]
       "source.json": [
         "BUCK.autodeps"
@@ -17,7 +22,7 @@
     disabledPackages: [
       "tree-view"
       "linter"
-      "prettier-atom"
+      "image-view"
     ]
     telemetryConsent: "limited"
   editor:
@@ -26,6 +31,8 @@
     softWrap: true
   "exception-reporting":
     userId: "8b2b5b2c-9169-46c2-9669-3df75ec888f6"
+  "git-blame":
+    columnWidth: 418
   nuclide:
     "atom-ide-diagnostics-ui":
       autoVisibility: true
@@ -33,6 +40,7 @@
       darwinTriggerKeys: "ctrlKey,altKey,metaKey"
     "nuclide-flow":
       pathToFlow: "/Users/jared/fl/node_modules/.bin/flow"
+      warnOnNotInstalled: false
     "nuclide-home":
       showHome: false
     use: {}
@@ -164,9 +172,29 @@
       "helpeth"
       "sitteth"
       "forsaketh"
+      "washeth"
+      "leadeth"
+      "pierceth"
+      "oughtest"
+      "continuest"
+      "beareth"
+      "sprinkleth"
+      "heareth"
+      "obeyeth"
+      "reverenceth"
+      "resemblest"
+      "quickenings"
+      "availeth"
+      "armour"
+      "abideth"
+      "worketh"
+      "hideth"
+      "knowest"
+      "readest"
     ]
   welcome:
     showOnStartup: false
+  whitespace: {}
 ".html.php.text":
   editor:
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…$"

@@ -137,6 +137,10 @@
     'prefix': 'csb'
     'body': '[.chapter-subtitle--blurb]'
 
+  '[.book-title]#':
+    'prefix': 'bt'
+    'body': '[.book-title]#'
+
 # PHP
 ".text.html.php":
 
